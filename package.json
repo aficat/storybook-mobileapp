@@ -12,6 +12,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-transform-class-properties": "^7.27.1",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
     "@chromatic-com/storybook": "^1.4.0",
     "@storybook/addon-a11y": "^8.1.1",
     "@storybook/addon-essentials": "^8.1.1",
@@ -23,10 +28,16 @@
     "@storybook/react": "^8.1.1",
     "@storybook/react-webpack5": "^8.1.1",
     "@storybook/test": "^8.1.1",
+    "@tailwindcss/forms": "^0.5.10",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.21",
+    "babel-loader": "^10.0.0",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0",
     "prop-types": "^15.8.1",
     "storybook": "^8.1.1",
+    "tailwindcss": "^4.1.15",
     "typescript": "^5.0.0"
   }
 }
