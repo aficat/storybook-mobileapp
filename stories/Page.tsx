@@ -1,6 +1,5 @@
 import React from 'react';
 import { Header, User } from './Header';
-import './page.css';
 
 export const Page: React.FC = () => {
   const [user, setUser] = React.useState<User | undefined>();

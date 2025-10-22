@@ -23,5 +23,31 @@ const config = {
       propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
     },
   },
+  webpackFinal: async (config) => {
+    // Add TypeScript support
+    config.module.rules.push({
+      test: /\.tsx?$/,
+      use: [
+        {
+          loader: 'babel-loader',
+        },
+      ],
+    });
+    
+    // Override CSS processing to use simple CSS loader
+    config.module.rules = config.module.rules.map(rule => {
+      if (rule.test && rule.test.toString().includes('css')) {
+        return {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader'],
+        };
+      }
+      return rule;
+    });
+    
+    config.resolve.extensions.push('.ts', '.tsx');
+    
+    return config;
+  },
 };
 export default config;
